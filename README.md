@@ -3,7 +3,7 @@
 - [📝 Table of Contents](#-table-of-contents)
 - [About <a name = "about"></a>](#about-)
 - [Gaming System <a name = "gaming-system"></a>](#gaming-system-)
-- [ScreenShots from the website: <a name = "screen-shots"></a>](#screenshots-from-the-website-)
+- [ScreenShot from the game: <a name = "screen-shot"></a>](#screenshot-from-the-game-)
 - [Contributors <a name = "Contributors"></a>](#contributors-)
 
 ## About <a name = "about"></a>
@@ -17,8 +17,9 @@ Pong is a two-dimensional sports game that simulates table tennis:
  - Player 2 uses "Up", "Down" from keyboard.
  - The player controls an in-game paddle by moving it vertically across the left or right side   of the screen. Players use the paddles to hit a ball back and forth. 
  - points are earned when one fails to return the ball to the other.
- ## ScreenShots from the website: <a name = "screen-shots"></a>
+ ## ScreenShot from the game: <a name = "screen-shot"></a>
 
+![Capture](https://user-images.githubusercontent.com/88618793/194724125-8c09e254-9f1c-490e-93bd-41fe69c6c7af.PNG)
 
 ## Contributors <a name = "Contributors"></a>
 
