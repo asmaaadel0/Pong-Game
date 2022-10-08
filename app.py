@@ -24,6 +24,14 @@ racket2.shapesize(stretch_wid=5, stretch_len=1)
 racket2.penup()
 racket2.goto(350, 0)
 
+#Ball
+ball = turtle.Turtle()
+ball.speed(0)
+ball.shape("circle")
+ball.color("white")
+ball.penup()
+ball.goto(0, 0)
+
 #main game loop
 while True:
     wind.update() #updates the screen everytime
