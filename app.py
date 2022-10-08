@@ -1,3 +1,5 @@
+from asyncore import write
+from ctypes import alignment
 import turtle
 
 wind = turtle.Screen()  # initialize screen
@@ -33,6 +35,18 @@ ball.penup()
 ball.goto(0, 0)
 ball.dx = .5
 ball.dy = .5
+
+# score
+score1 = 0
+score2 = 0
+score = turtle.Turtle()
+score.speed(0)
+score.color("white")
+score.penup()
+score.hideturtle()
+score.goto(0, 260)
+score.write("Player1: 0 Player 2: 0", align="center",
+            font=("Courier", 24, "normal"))
 
 # functions
 
@@ -96,10 +110,18 @@ while True:
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
+        score1 += 1
+        score.clear()
+        score.write("Player1: {} Player 2: {}".format(score1, score2), align="center",
+                    font=("Courier", 24, "normal"))
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
+        score.clear()
+        score2 += 1
+        score.write("Player1: {} Player 2: {}".format(score1, score2), align="center",
+                    font=("Courier", 24, "normal"))
 
     # Racket and ball collision
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < racket2.ycor()+40 and ball.ycor() > racket2.ycor() - 40):
@@ -108,4 +130,4 @@ while True:
 
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < racket1.ycor()+40 and ball.ycor() > racket1.ycor() - 40):
         ball.setx(-340)
-        ball.dx *= -1        
+        ball.dx *= -1
