@@ -31,6 +31,8 @@ ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
+ball.dx = .5
+ball.dy = .5
 
 # functions
 
@@ -46,6 +48,7 @@ def racket1_down():
     y -= 20
     racket1.sety(y)
 
+
 def racket2_up():
     y = racket2.ycor()
     y += 20
@@ -55,7 +58,7 @@ def racket2_up():
 def racket2_down():
     y = racket2.ycor()
     y -= 20
-    racket2.sety(y)    
+    racket2.sety(y)
 
 
 # def racket1_up():
@@ -76,3 +79,7 @@ wind.onkeypress(racket2_down, "Down")
 # main game loop
 while True:
     wind.update()  # updates the screen everytime
+
+    # move the ball
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
